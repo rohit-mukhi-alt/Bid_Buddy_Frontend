@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { getApiUrl } from '../lib/api'
 import Navbar from '../components/Navbar'
-import { getApiUrl } from '../lib/api'
 
 interface FormData {
   title: string
@@ -114,7 +113,7 @@ export default function CreateAuction() {
 
       setSuccessMessage('Uploading image and creating auction...')
 
-      const response = await fetch(getApiUrl('/api/auctions/create', {
+      const response = await fetch(getApiUrl('/api/auctions/create'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
