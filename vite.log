@@ -1,0 +1,23 @@
+
+> frontend@0.0.0 dev
+> vite
+
+
+  VITE v8.0.0  ready in 176 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+Files in the public directory are served at the root path.
+Instead of /public/bid_buddy-logo.png, use /bid_buddy-logo.png.
+8:01:49 pm [vite] (client) hmr update /src/pages/AuctionDetail.tsx
+Files in the public directory are served at the root path.
+Instead of /public/bid_buddy-logo.png, use /bid_buddy-logo.png.
+8:02:41 pm [vite] (client) hmr update /src/pages/Profile.tsx
+8:02:59 pm [vite] (client) hmr update /src/pages/Profile.tsx
+8:03:28 pm [vite] (client) hmr update /src/pages/Profile.tsx
+8:03:40 pm [vite] (client) hmr update /src/pages/Profile.tsx
+8:03:52 pm [vite] (client) hmr update /src/pages/Profile.tsx
+8:05:01 pm [vite] (client) hmr update /src/pages/Profile.tsx
+8:14:52 pm [vite] (client) hmr update /src/pages/AuctionListing.tsx
+8:15:56 pm [vite] (client) hmr update /src/pages/AuctionDetail.tsx
+Killed
