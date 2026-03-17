@@ -60,7 +60,7 @@ export default function AuctionDetail() {
       try {
         const token = localStorage.getItem('jwt_token')
         if (!token || !id) return
-        const response = await fetch(getApiUrl(`/api/auction-credits/auction/${id}`, {
+        const response = await fetch(getApiUrl(`/api/auction-credits/auction/${id}`), {
           headers: { 'Authorization': `Bearer ${token}` },
         })
         if (response.ok) {
@@ -137,7 +137,7 @@ export default function AuctionDetail() {
     try {
       setLoading(true)
       setError('')
-      const response = await fetch(getApiUrl(`/api/auctions/${id}`)
+      const response = await fetch(getApiUrl(`/api/auctions/${id}`))
 
       if (!response.ok) {
         throw new Error('Failed to fetch auction')
@@ -163,7 +163,7 @@ export default function AuctionDetail() {
 
   const fetchTopBids = async () => {
     try {
-      const response = await fetch(getApiUrl(`/api/auctions/${id}/top-bids`)
+      const response = await fetch(getApiUrl(`/api/auctions/${id}/top-bids`))
       if (response.ok) {
         const data = await response.json()
         setTopBids(data.topBids.map((bid: any) => ({
@@ -185,7 +185,7 @@ export default function AuctionDetail() {
         return
       }
 
-      const response = await fetch(getApiUrl(`/api/bidding/requests/${id}/status`, {
+      const response = await fetch(getApiUrl(`/api/bidding/requests/${id}/status`), {
         headers: { 'Authorization': `Bearer ${token}` },
       })
 
@@ -216,7 +216,7 @@ export default function AuctionDetail() {
         return
       }
 
-      const response = await fetch(getApiUrl(`/api/bidding/requests/${id}`, {
+      const response = await fetch(getApiUrl(`/api/bidding/requests/${id}`), {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -316,7 +316,7 @@ export default function AuctionDetail() {
         return
       }
 
-      const response = await fetch(getApiUrl(`/api/auctions/${id}/bid`, {
+      const response = await fetch(getApiUrl(`/api/auctions/${id}/bid`), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
