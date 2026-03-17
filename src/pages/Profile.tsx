@@ -4,7 +4,6 @@ import { useAuth } from '../context/AuthContext'
 import Navbar from '../components/Navbar'
 import { getPlaceholderImage } from '../utils/placeholder'
 import { getApiUrl } from '../lib/api'
-import { getApiUrl } from '../lib/api'
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js'
 import { Line } from 'react-chartjs-2'
 
