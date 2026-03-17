@@ -2,7 +2,6 @@ import { useAuth } from '../context/AuthContext'
 import { getApiUrl } from '../lib/api'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { getApiUrl } from '../lib/api'
 
 export default function Home() {
   const { session, user, signOut } = useAuth()
@@ -10,7 +9,7 @@ export default function Home() {
 
   const handleRoleSelection = async (role: 'admin' | 'bidder') => {
     try {
-      const response = await fetch(getApiUrl('/api/auth/update-role', {
+      const response = await fetch(getApiUrl('/api/auth/update-role'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
